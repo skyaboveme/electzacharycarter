@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Get Involved | Elect Zachary Carter for Justice of the Peace, Precinct 2"
+  description="Support Zachary Carter's campaign for Justice of the Peace in Bastrop County. Volunteer, request a yard sign, or get in touch."
+>
+  <!-- Page Header -->
+  <section class="block-navy section-pad">
+    <div class="max-w-7xl mx-auto">
+      <div class="editorial-rule-white mb-6"></div>
+      <div class="font-display text-sm tracking-[0.2em] text-red mb-4">JOIN THE CAMPAIGN</div>
+      <h1 class="text-hero text-white">Get<br/><span class="text-red">Involved</span></h1>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="block-white section-pad">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+        <!-- Form Column (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="editorial-rule mb-6"></div>
+          <h2 class="text-section text-ink mb-4">Send a Message</h2>
+          <p class="text-editorial text-ink-light mb-10">
+            Whether you want to volunteer, have a question, or just want to show your support — we'd love to hear from you.
+          </p>
+
+          <form
+            action="https://formsubmit.co/electzacharycarter@gmail.com"
+            method="POST"
+            class="space-y-6"
+            id="contact-form"
+          >
+            <input type="hidden" name="_subject" value="New message from ElectZacharyCarter.com" />
+            <input type="hidden" name="_next" value="https://electzacharycarter.com/thank-you" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block font-display text-sm tracking-[0.1em] text-ink mb-2">FULL NAME *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border-[3px] border-navy/20 focus:border-navy bg-white outline-none transition-colors font-body text-ink"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block font-display text-sm tracking-[0.1em] text-ink mb-2">EMAIL *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border-[3px] border-navy/20 focus:border-navy bg-white outline-none transition-colors font-body text-ink"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="block font-display text-sm tracking-[0.1em] text-ink mb-2">PHONE (OPTIONAL)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="w-full px-4 py-3 border-[3px] border-navy/20 focus:border-navy bg-white outline-none transition-colors font-body text-ink"
+                placeholder="(512) 555-0123"
+              />
+            </div>
+
+            <div>
+              <label for="interest" class="block font-display text-sm tracking-[0.1em] text-ink mb-2">I'M INTERESTED IN...</label>
+              <select
+                id="interest"
+                name="interest"
+                class="w-full px-4 py-3 border-[3px] border-navy/20 focus:border-navy bg-white outline-none transition-colors font-body text-ink"
+              >
+                <option value="general">General Support</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="yardsign">Requesting a Yard Sign</option>
+                <option value="endorsement">Offering an Endorsement</option>
+                <option value="question">Asking a Question</option>
+                <option value="media">Media Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block font-display text-sm tracking-[0.1em] text-ink mb-2">MESSAGE</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full px-4 py-3 border-[3px] border-navy/20 focus:border-navy bg-white outline-none transition-colors font-body text-ink resize-y"
+                placeholder="Tell us how you'd like to help..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-red w-full text-lg" id="submit-btn">
+              Send Message →
+            </button>
+          </form>
+        </div>
+
+        <!-- Sidebar (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+
+          <!-- Yard Signs -->
+          <div class="border-[3px] border-navy p-8">
+            <div class="font-display text-red text-sm tracking-[0.2em] mb-3">YARD SIGNS</div>
+            <h3 class="font-display text-3xl text-ink mb-4">Request a Sign</h3>
+            <p class="text-editorial text-ink-light mb-4">
+              Show your support! Request a free Zachary Carter campaign yard sign. Select "Requesting a Yard Sign" in the form and include your address.
+            </p>
+            <div class="font-display text-sm tracking-[0.15em] text-red">★ FREE WHILE SUPPLIES LAST</div>
+          </div>
+
+          <!-- Facebook -->
+          <div class="bg-navy p-8">
+            <div class="font-display text-red text-sm tracking-[0.2em] mb-3">SOCIAL</div>
+            <h3 class="font-display text-3xl text-white mb-4">Follow the Campaign</h3>
+            <p class="font-body text-white/60 text-sm mb-6">
+              Stay up to date with campaign news, community events, and announcements.
+            </p>
+            <a
+              href="https://www.facebook.com/ElectZacharyCarter"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-white w-full"
+              id="sidebar-facebook"
+            >
+              Visit Our Facebook →
+            </a>
+          </div>
+
+          <!-- Ways to Help -->
+          <div class="border-[3px] border-navy p-8">
+            <div class="font-display text-red text-sm tracking-[0.2em] mb-3">VOLUNTEER</div>
+            <h3 class="font-display text-3xl text-ink mb-4">Ways to Help</h3>
+            <ul class="star-list text-editorial text-ink-light">
+              <li>Display a yard sign</li>
+              <li>Share on social media</li>
+              <li>Talk to friends and neighbors</li>
+              <li>Volunteer at campaign events</li>
+              <li>Help with block walking</li>
+              <li>Spread the word at church and community groups</li>
+            </ul>
+          </div>
+
+          <!-- Location -->
+          <div class="bg-bone p-8 border-l-[5px] border-red">
+            <div class="font-display text-2xl text-ink mb-2">BASTROP COUNTY</div>
+            <div class="font-display text-lg text-ink-light tracking-wider">TEXAS</div>
+            <div class="font-body text-ink-light text-sm mt-4">
+              Justice of the Peace, Precinct 2
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

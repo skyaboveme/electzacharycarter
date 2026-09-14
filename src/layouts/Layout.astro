@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "Elect Zachary Carter — Justice of the Peace, Precinct 2 | Bastrop County, TX",
+  description = "Elect Zachary Carter for Justice of the Peace, Precinct 2 in Bastrop County, Texas. 19 years of experience in corrections, law enforcement, Municipal and Justice Court. Experience. Integrity. Justice.",
+  keywords = "Zachary Carter, Justice of the Peace, Bastrop County, Precinct 2, Texas, elect, JP, law enforcement, corrections, justice court, municipal court, Smithville",
+  ogImage = "/images/og-default.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(ogImage, Astro.site);
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImage} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zachary Carter",
+    "jobTitle": "Candidate for Justice of the Peace, Precinct 2",
+    "url": "https://electzacharycarter.com",
+    "sameAs": [
+      "https://www.facebook.com/ElectZacharyCarter"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bastrop County",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "description": "Candidate for Justice of the Peace, Precinct 2, Bastrop County, Texas. 19 years of experience in corrections, law enforcement, Municipal and Justice Court."
+  })} />
+</head>
+<body class="min-h-screen flex flex-col bg-white">
+  <Nav />
+  <main class="flex-1">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

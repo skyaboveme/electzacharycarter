@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+@theme {
+  /* === COMMITTED PALETTE: Red, White, Blue === */
+  /* Dominant: Deep Navy — owns 60%+ of visual weight */
+  --color-navy: #0A1628;
+  --color-navy-mid: #152238;
+  --color-navy-light: #1E3050;
+
+  /* Sharp Accent: True Red — used surgically for high impact */
+  --color-red: #CC0000;
+  --color-red-dark: #990000;
+  --color-red-bright: #E50000;
+
+  /* White spectrum */
+  --color-white: #FFFFFF;
+  --color-off-white: #F2F0EB;
+  --color-bone: #E8E4DD;
+
+  /* Text */
+  --color-ink: #0A1628;
+  --color-ink-light: #3A4A60;
+
+  /* Editorial: Bebas Neue for headlines, Libre Baskerville for body */
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-body: "Libre Baskerville", "Georgia", serif;
+}
+
+/* === BASE === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* === PAGE LOAD REVEAL — the ONLY animation === */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-d1 { animation-delay: 0.1s; }
+.reveal-d2 { animation-delay: 0.25s; }
+.reveal-d3 { animation-delay: 0.4s; }
+.reveal-d4 { animation-delay: 0.55s; }
+
+/* === EDITORIAL DIVIDER === */
+.editorial-rule {
+  width: 80px;
+  height: 4px;
+  background: var(--color-red);
+  border: none;
+}
+
+.editorial-rule-white {
+  width: 80px;
+  height: 4px;
+  background: var(--color-white);
+  border: none;
+}
+
+/* === BOLD BLOCK SECTIONS === */
+.block-navy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.block-red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.block-white {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+}
+
+.block-bone {
+  background-color: var(--color-off-white);
+  color: var(--color-ink);
+}
+
+/* === TYPOGRAPHY SCALE === */
+.text-hero {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-section {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.text-sub {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.text-editorial {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* === BUTTONS — SHARP, NO ROUNDED CORNERS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 52px;
+  border: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-color: var(--color-red);
+}
+
+.btn-red:hover {
+  background-color: var(--color-red-dark);
+  border-color: var(--color-red-dark);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+}
+
+.btn-navy {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+}
+
+.btn-navy:hover {
+  background-color: var(--color-navy-mid);
+  border-color: var(--color-navy-mid);
+}
+
+.btn-outline-navy {
+  background-color: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn-outline-navy:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* === SECTION SPACING === */
+.section-pad {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding: 7rem 2rem;
+  }
+}
+
+/* === STAR BULLETS — editorial style === */
+.star-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.star-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: var(--color-red);
+  font-size: 0.875rem;
+}
+
+/* === HARD BORDER CARD === */
+.hard-card {
+  background: var(--color-white);
+  border: 3px solid var(--color-navy);
+  padding: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+.hard-card:hover {
+  background: var(--color-off-white);
+}
+
+/* === RED BAR ACCENT === */
+.red-bar-left {
+  border-left: 5px solid var(--color-red);
+  padding-left: 1.5rem;
+}

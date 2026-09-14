@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#002868"/>
+  <text x="16" y="22" font-family="serif" font-weight="bold" font-size="16" fill="#C5A028" text-anchor="middle">ZC</text>
+  <path d="M16 3l1.5 3 3.5.5-2.5 2.4.6 3.4L16 11l-3.1 1.3.6-3.4L11 6.5l3.5-.5L16 3z" fill="#C5A028" opacity="0.3" transform="scale(0.5) translate(16,0)"/>
+</svg>

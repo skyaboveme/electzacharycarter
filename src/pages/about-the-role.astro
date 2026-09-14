@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const duties = [
+  {
+    num: "01",
+    title: "Criminal Jurisdiction",
+    scope: "Class C Misdemeanors",
+    description: "Presides over Class C misdemeanor cases — offenses punishable by fine only, including traffic violations, public intoxication, and other minor criminal matters.",
+    connection: "Zachary's law enforcement background gives him firsthand knowledge of criminal procedure and the types of cases that come before a Justice Court."
+  },
+  {
+    num: "02",
+    title: "Civil Jurisdiction",
+    scope: "Up to $20,000",
+    description: "Handles civil cases where the amount in controversy is $20,000 or less. This includes small claims lawsuits, debt collection cases, and landlord/tenant disputes such as evictions.",
+    connection: "Zachary's court experience means he understands the civil process from both sides — ensuring fair outcomes for all parties."
+  },
+  {
+    num: "03",
+    title: "Warrants & Magistrate",
+    scope: "Search, Arrest, Bail",
+    description: "Issues search and arrest warrants, sets bail amounts, conducts preliminary hearings, administers oaths, and performs juvenile/magistrate warnings.",
+    connection: "With experience in both law enforcement and corrections, Zachary understands the critical importance of proper warrant procedures and fair bail."
+  },
+  {
+    num: "04",
+    title: "Presiding Over Trials",
+    scope: "Jury & Bench Trials",
+    description: "The Justice of the Peace presides over both civil and criminal jury and bench trials, ensuring due process and the fair administration of justice.",
+    connection: "Zachary's municipal and justice court experience has given him direct exposure to trial proceedings and courtroom management."
+  },
+  {
+    num: "05",
+    title: "Inquests & Coroner",
+    scope: "Death Investigations",
+    description: "In counties without a medical examiner, the JP acts as the coroner — conducting inquests into deaths and completing death certificates.",
+    connection: "Zachary's experience in law enforcement and corrections has prepared him to handle these sensitive matters with professionalism."
+  },
+  {
+    num: "06",
+    title: "Marriage Ceremonies",
+    scope: "Wedding Officiant",
+    description: "Justices of the Peace are authorized to perform wedding ceremonies — one of the most rewarding aspects of the office.",
+    connection: "As a family man himself, Zachary looks forward to serving couples on one of the most important days of their lives."
+  },
+  {
+    num: "07",
+    title: "Juvenile & Truancy",
+    scope: "Youth Matters",
+    description: "Handles truancy cases and performs juvenile warnings, working to keep young people on the right path and connected to their education.",
+    connection: "As a parent raising his family here, Zachary is personally invested in the well-being of our community's youth."
+  },
+  {
+    num: "08",
+    title: "Court Administration",
+    scope: "Docket & Compliance",
+    description: "Manages the court docket, oversees local complaints, and submits required reports to state agencies and county auditors.",
+    connection: "Zachary's career has built the organizational skills and attention to detail required to manage a court efficiently."
+  }
+];
+---
+
+<Layout
+  title="What Does a Justice of the Peace Do? | Elect Zachary Carter"
+  description="Learn about the duties and responsibilities of a Justice of the Peace in Texas. Discover why Zachary Carter's 19 years of experience make him uniquely qualified."
+  keywords="Justice of the Peace duties, JP Texas, what does a justice of the peace do, Bastrop County, Zachary Carter"
+>
+  <!-- Page Header -->
+  <section class="block-navy section-pad">
+    <div class="max-w-7xl mx-auto">
+      <div class="editorial-rule-white mb-6"></div>
+      <div class="font-display text-sm tracking-[0.2em] text-red mb-4">KNOW YOUR COURT</div>
+      <h1 class="text-hero text-white">
+        The <span class="text-red">Role</span>
+      </h1>
+      <p class="text-editorial text-white/60 max-w-2xl mt-6">
+        In Texas, the Justice of the Peace is the judicial official closest to the people — and Zachary Carter's 19 years of experience make him uniquely qualified to serve.
+      </p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="block-white section-pad">
+    <div class="max-w-4xl mx-auto">
+      <div class="red-bar-left">
+        <div class="font-display text-sm tracking-[0.2em] text-red mb-4">THE PEOPLE'S COURT</div>
+        <p class="text-editorial text-ink-light mb-6">
+          The Justice Court is often referred to as <strong class="text-ink">"the people's court"</strong> because it's the most accessible level of the Texas judiciary. Unlike higher courts, Justice Courts are designed to be approachable, affordable, and efficient — handling the legal matters that affect everyday Texans.
+        </p>
+        <p class="text-editorial text-ink-light">
+          Justices of the Peace are elected to <strong class="text-ink">four-year terms</strong> and serve their local precinct. They need a unique combination of legal knowledge, administrative skill, and genuine compassion for the community they serve.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Duties -->
+  <section class="block-bone section-pad" id="duties">
+    <div class="max-w-7xl mx-auto">
+      <div class="editorial-rule mb-6"></div>
+      <h2 class="text-section text-ink mb-4">Duties &<br/>Responsibilities</h2>
+      <p class="text-editorial text-ink-light mb-14 max-w-2xl">
+        Every duty of the Justice of the Peace connects directly to Zachary Carter's 19 years of experience.
+      </p>
+
+      <div class="space-y-0">
+        {duties.map((duty) => (
+          <div class="border-b-[3px] border-navy py-8 md:py-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8" id={`duty-${duty.num}`}>
+            <!-- Number + Title -->
+            <div class="md:col-span-4">
+              <div class="font-display text-red text-sm tracking-[0.2em] mb-1">{duty.num}</div>
+              <h3 class="font-display text-3xl md:text-4xl text-ink">{duty.title}</h3>
+              <div class="font-display text-sm tracking-[0.15em] text-ink-light mt-2">{duty.scope}</div>
+            </div>
+
+            <!-- Description -->
+            <div class="md:col-span-4">
+              <p class="text-editorial text-ink-light">{duty.description}</p>
+            </div>
+
+            <!-- Why Zachary -->
+            <div class="md:col-span-4">
+              <div class="red-bar-left">
+                <div class="font-display text-sm tracking-[0.15em] text-red mb-2">WHY ZACHARY</div>
+                <p class="font-body text-sm text-ink-light">{duty.connection}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Matters CTA -->
+  <section class="block-navy section-pad" id="experience-matters">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="editorial-rule-white mb-6"></div>
+          <h2 class="text-section text-white mb-8">
+            Why <span class="text-red">Experience</span><br/>Matters
+          </h2>
+          <p class="text-editorial text-white/70">
+            The Justice of the Peace handles a wide range of critical duties. This role demands someone who understands the full scope of the justice system. Zachary Carter's unique career path gives him perspective that no other candidate can match.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-0 border-[3px] border-white/20">
+          <div class="border-b-[3px] border-r-[3px] border-white/20 p-6 md:p-8">
+            <div class="font-display text-5xl text-red">19+</div>
+            <div class="font-display text-sm tracking-[0.1em] text-white/50 mt-2">YEARS IN JUSTICE</div>
+          </div>
+          <div class="border-b-[3px] border-white/20 p-6 md:p-8">
+            <div class="font-display text-5xl text-white">4</div>
+            <div class="font-display text-sm tracking-[0.1em] text-white/50 mt-2">AREAS OF EXPERTISE</div>
+          </div>
+          <div class="border-r-[3px] border-white/20 p-6 md:p-8">
+            <div class="font-display text-5xl text-white">1</div>
+            <div class="font-display text-sm tracking-[0.1em] text-white/50 mt-2">COMMUNITY: BASTROP</div>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="font-display text-5xl text-red">★</div>
+            <div class="font-display text-sm tracking-[0.1em] text-white/50 mt-2">READY DAY ONE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-12">
+        <a href="/about" class="btn btn-red">Meet Zachary Carter →</a>
+        <a href="/contact" class="btn btn-outline-white">Get Involved</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
