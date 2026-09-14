@@ -55,7 +55,17 @@ import Footer from '../components/Footer.astro';
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- JSON-LD Structured Data -->
+  <!-- AI Discovery -->
+  <link rel="alternate" type="text/plain" href="/llm.txt" title="LLM Content" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Site Index" />
+
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="US-TX" />
+  <meta name="geo.placename" content="Bastrop County, Texas" />
+  <meta name="geo.position" content="30.1105;-97.3153" />
+  <meta name="ICBM" content="30.1105, -97.3153" />
+
+  <!-- JSON-LD: Person -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
@@ -71,7 +81,40 @@ import Footer from '../components/Footer.astro';
       "addressRegion": "TX",
       "addressCountry": "US"
     },
-    "description": "Candidate for Justice of the Peace, Precinct 2, Bastrop County, Texas. 19 years of experience in corrections, law enforcement, Municipal and Justice Court."
+    "description": "Candidate for Justice of the Peace, Precinct 2, Bastrop County, Texas. 19 years of experience in corrections, law enforcement, Municipal and Justice Court.",
+    "knowsAbout": [
+      "Criminal Justice",
+      "Law Enforcement",
+      "Corrections",
+      "Municipal Court Administration",
+      "Justice Court Operations",
+      "Texas Judicial System"
+    ]
+  })} />
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Elect Zachary Carter",
+    "url": "https://electzacharycarter.com",
+    "description": "Official campaign website for Zachary Carter, candidate for Justice of the Peace, Precinct 2, Bastrop County, Texas.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Zachary Carter"
+    }
+  })} />
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://electzacharycarter.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About Zachary", "item": "https://electzacharycarter.com/about/" },
+      { "@type": "ListItem", "position": 3, "name": "The Role", "item": "https://electzacharycarter.com/about-the-role/" },
+      { "@type": "ListItem", "position": 4, "name": "Get Involved", "item": "https://electzacharycarter.com/contact/" }
+    ]
   })} />
 </head>
 <body class="min-h-screen flex flex-col bg-white">
