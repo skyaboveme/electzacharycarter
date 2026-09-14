@@ -9,9 +9,18 @@ import Layout from '../layouts/Layout.astro';
   <!-- Page Header -->
   <section class="block-navy section-pad">
     <div class="max-w-7xl mx-auto">
-      <div class="editorial-rule-white mb-6"></div>
-      <div class="font-display text-sm tracking-[0.2em] text-red mb-4">MEET YOUR CANDIDATE</div>
-      <h1 class="text-hero text-white">About<br/><span class="text-red">Zachary</span></h1>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+        <div class="lg:col-span-7">
+          <div class="editorial-rule-white mb-6"></div>
+          <div class="font-display text-sm tracking-[0.2em] text-red mb-4">MEET YOUR CANDIDATE</div>
+          <h1 class="text-hero text-white">About<br/><span class="text-red">Zachary</span></h1>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="border-[3px] border-white/20 overflow-hidden">
+            <img src="/assets/Headshot.jpg" alt="Zachary Carter, candidate for Justice of the Peace" class="w-full h-auto block" loading="eager" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -113,23 +122,32 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Photo Gallery Placeholder -->
+  <!-- Photo Gallery -->
   <section class="block-white section-pad">
     <div class="max-w-7xl mx-auto">
       <div class="editorial-rule mb-6"></div>
       <h2 class="text-section text-ink mb-10">Community &<br/>Campaign</h2>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-1">
-        {[1,2,3,4,5,6].map((i) => (
-          <div class="aspect-[4/3] bg-bone flex items-center justify-center border border-navy/10">
-            <div class="text-center p-4">
-              <div class="font-display text-3xl text-navy/15 mb-1">{String(i).padStart(2, '0')}</div>
-              <span class="font-body text-ink-light/40 text-xs">Photo {i}</span>
-            </div>
-          </div>
-        ))}
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/Headshot.jpg" alt="Zachary Carter official campaign headshot" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/2.png" alt="Zachary Carter being sworn in at Bastrop County courthouse" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/4.png" alt="Zachary Carter in sheriff uniform with his child" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/jZbvNz8cRxODPBULevs6gA.jpg" alt="Zachary Carter in uniform at the Texas State Capitol" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/IMG_2586.jpg" alt="Zachary Carter and team at a community volunteer event" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="/assets/001KeepZachary_PCard_6x4_PRINT_Page_1.jpg.png" alt="Zachary Carter campaign card with family" class="w-full h-full object-cover" loading="lazy" />
+        </div>
       </div>
-      <p class="text-center text-ink-light text-sm mt-6 font-body italic">Campaign photos coming soon</p>
     </div>
   </section>
 

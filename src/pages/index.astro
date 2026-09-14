@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="block-navy relative overflow-hidden" id="hero">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-36 lg:py-44">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-        <!-- Main headline. takes 8 columns -->
-        <div class="lg:col-span-8">
+        <!-- Main headline. takes 7 columns -->
+        <div class="lg:col-span-7">
           <div class="reveal">
             <div class="editorial-rule-white mb-8"></div>
           </div>
@@ -20,26 +20,31 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-red">Zachary</span><br/>
             Carter
           </h1>
+          <div class="mt-8 reveal reveal-d2">
+            <div class="font-display text-2xl md:text-3xl text-white/80 tracking-widest mb-2">
+              Justice of the Peace
+            </div>
+            <div class="font-display text-xl text-red tracking-[0.2em] mb-8">
+              Precinct 2 · Bastrop County
+            </div>
+            <p class="text-white/60 font-body text-base leading-relaxed mb-8">
+              Experience. Integrity. Justice.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 reveal reveal-d3">
+              <a href="/about" class="btn btn-red" id="hero-learn-more">
+                Meet Zachary →
+              </a>
+              <a href="https://www.facebook.com/ElectZacharyCarter" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="hero-facebook">
+                Facebook
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Side column. office + CTAs -->
-        <div class="lg:col-span-4 reveal reveal-d2">
-          <div class="font-display text-2xl md:text-3xl text-white/80 tracking-widest mb-2">
-            Justice of the Peace
-          </div>
-          <div class="font-display text-xl text-red tracking-[0.2em] mb-8">
-            Precinct 2 · Bastrop County
-          </div>
-          <p class="text-white/60 font-body text-base leading-relaxed mb-8">
-            Experience. Integrity. Justice.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 reveal reveal-d3">
-            <a href="/about" class="btn btn-red" id="hero-learn-more">
-              Meet Zachary →
-            </a>
-            <a href="https://www.facebook.com/ElectZacharyCarter" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="hero-facebook">
-              Facebook
-            </a>
+        <!-- Headshot column -->
+        <div class="lg:col-span-5 reveal reveal-d2">
+          <div class="border-[3px] border-white/20 overflow-hidden">
+            <img src="/assets/Headshot.jpg" alt="Zachary Carter, candidate for Justice of the Peace, Precinct 2, Bastrop County" class="w-full h-auto block" loading="eager" />
           </div>
         </div>
       </div>
@@ -76,15 +81,27 @@ import Layout from '../layouts/Layout.astro';
   <!-- PERSONAL STATEMENT. Editorial quote block -->
   <!-- ============================================ -->
   <section class="block-white section-pad" id="statement">
-    <div class="max-w-4xl mx-auto">
-      <div class="red-bar-left">
-        <div class="font-display text-sm tracking-[0.2em] text-red mb-6">IN HIS OWN WORDS</div>
-        <blockquote class="font-body text-2xl sm:text-3xl md:text-4xl text-ink italic leading-snug mb-8">
-          "Bastrop County has been my home since I was a child and now I'm raising my family in the community that I have proudly served for the last <span class="not-italic font-bold text-red">19 years</span>."
-        </blockquote>
-        <p class="text-editorial text-ink-light">
-          I bring education and experience from <strong>corrections</strong>, <strong>law enforcement</strong>, <strong>Municipal Court</strong>, and <strong>Justice Court</strong>: the exact combination needed to serve you as your next Justice of the Peace.
-        </p>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Photo column -->
+        <div class="lg:col-span-5">
+          <div class="border-[3px] border-navy overflow-hidden">
+            <img src="/assets/jZbvNz8cRxODPBULevs6gA.jpg" alt="Zachary Carter in uniform at the Texas State Capitol" class="w-full h-auto block" loading="lazy" />
+          </div>
+          <div class="font-display text-xs tracking-[0.15em] text-ink-light mt-3">AT THE TEXAS STATE CAPITOL</div>
+        </div>
+        <!-- Quote column -->
+        <div class="lg:col-span-7">
+          <div class="red-bar-left">
+            <div class="font-display text-sm tracking-[0.2em] text-red mb-6">IN HIS OWN WORDS</div>
+            <blockquote class="font-body text-2xl sm:text-3xl md:text-4xl text-ink italic leading-snug mb-8">
+              "Bastrop County has been my home since I was a child and now I'm raising my family in the community that I have proudly served for the last <span class="not-italic font-bold text-red">19 years</span>."
+            </blockquote>
+            <p class="text-editorial text-ink-light">
+              I bring education and experience from <strong>corrections</strong>, <strong>law enforcement</strong>, <strong>Municipal Court</strong>, and <strong>Justice Court</strong>: the exact combination needed to serve you as your next Justice of the Peace.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -202,24 +219,36 @@ import Layout from '../layouts/Layout.astro';
   <!-- WHY ZACHARY. Full navy CTA block -->
   <!-- ============================================ -->
   <section class="block-navy section-pad" id="why-zachary">
-    <div class="max-w-4xl mx-auto">
-      <div class="editorial-rule-white mb-6"></div>
-      <h2 class="text-section text-white mb-8">
-        Why <span class="text-red">Zachary Carter</span>?
-      </h2>
-      <p class="text-editorial text-white/70 mb-4">
-        With nearly two decades of hands-on experience across <strong class="text-white">corrections</strong>, <strong class="text-white">law enforcement</strong>, <strong class="text-white">municipal court</strong>, and <strong class="text-white">justice court</strong>, Zachary Carter doesn't just understand the justice system. He's lived it.
-      </p>
-      <p class="text-editorial text-white/60 mb-12">
-        He's raising his family right here in Bastrop County because he believes in this community. Now he's ready to serve it from the bench.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/contact" class="btn btn-red" id="cta-get-involved">
-          Get Involved →
-        </a>
-        <a href="https://www.facebook.com/ElectZacharyCarter" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="cta-facebook">
-          Join on Facebook
-        </a>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Text -->
+        <div class="lg:col-span-7">
+          <div class="editorial-rule-white mb-6"></div>
+          <h2 class="text-section text-white mb-8">
+            Why <span class="text-red">Zachary Carter</span>?
+          </h2>
+          <p class="text-editorial text-white/70 mb-4">
+            With nearly two decades of hands-on experience across <strong class="text-white">corrections</strong>, <strong class="text-white">law enforcement</strong>, <strong class="text-white">municipal court</strong>, and <strong class="text-white">justice court</strong>, Zachary Carter doesn't just understand the justice system. He's lived it.
+          </p>
+          <p class="text-editorial text-white/60 mb-12">
+            He's raising his family right here in Bastrop County because he believes in this community. Now he's ready to serve it from the bench.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="btn btn-red" id="cta-get-involved">
+              Get Involved →
+            </a>
+            <a href="https://www.facebook.com/ElectZacharyCarter" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="cta-facebook">
+              Join on Facebook
+            </a>
+          </div>
+        </div>
+        <!-- Community photo -->
+        <div class="lg:col-span-5">
+          <div class="border-[3px] border-white/20 overflow-hidden">
+            <img src="/assets/IMG_2586.jpg" alt="Zachary Carter and campaign team volunteering at a Bastrop County community event" class="w-full h-auto block" loading="lazy" />
+          </div>
+          <div class="font-display text-xs tracking-[0.15em] text-white/40 mt-3">SERVING THE COMMUNITY</div>
+        </div>
       </div>
     </div>
   </section>
