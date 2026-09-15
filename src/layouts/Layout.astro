@@ -29,6 +29,15 @@ import Footer from '../components/Footer.astro';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP6STFK27E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZP6STFK27E');
+  </script>
+
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
